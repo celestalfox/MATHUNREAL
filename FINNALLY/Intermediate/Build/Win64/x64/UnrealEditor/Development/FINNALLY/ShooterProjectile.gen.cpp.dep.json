@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\unreal\\unrealmath\\finnally\\intermediate\\build\\win64\\unrealeditor\\inc\\finnally\\uht\\shooterprojectile.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\unreal\\unrealmath\\finnally\\intermediate\\build\\win64\\x64\\finnallyeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\unreal\\unrealmath\\finnally\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\finnally\\definitions.finnally.h",
+            "g:\\unreal\\unrealmath\\finnally\\source\\finnally\\variant_shooter\\weapons\\shooterprojectile.h",
+            "g:\\unreal\\unrealmath\\finnally\\intermediate\\build\\win64\\unrealeditor\\inc\\finnally\\uht\\shooterprojectile.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

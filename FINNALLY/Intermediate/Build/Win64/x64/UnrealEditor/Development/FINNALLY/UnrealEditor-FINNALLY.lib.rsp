@@ -1,0 +1,12 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-FINNALLY.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:/unreal/UNREALmath/FINNALLY/Intermediate/Build/Win64/x64/FINNALLYEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/unreal/UNREALmath/FINNALLY/Intermediate/Build/Win64/x64/UnrealEditor/Development/FINNALLY/Module.FINNALLY.cpp.obj"
+"G:/unreal/UNREALmath/FINNALLY/Intermediate/Build/Win64/x64/UnrealEditor/Development/FINNALLY/Default.rc2.res"
+/OUT:"G:/unreal/UNREALmath/FINNALLY/Intermediate/Build/Win64/x64/UnrealEditor/Development/FINNALLY/UnrealEditor-FINNALLY.lib"

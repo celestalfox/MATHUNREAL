@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "FINNALLY",
+			"Path": "..\\Source\\FINNALLY.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "FINNALLYEditor",
+			"Path": "..\\Source\\FINNALLYEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
