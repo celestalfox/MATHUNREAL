@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"G:\\maths\\MATHUNREAL\\finnally\\Source\\IntroductionUnreal\\IntroductionUnreal.Build.cs",
+		"G:\\maths\\MATHUNREAL\\finnally\\Source\\IntroductionUnreal.Target.cs",
+		"G:\\maths\\MATHUNREAL\\finnally\\Source\\IntroductionUnrealEditor.Target.cs"
+	],
+	"EngineVersion": "5.6.1"
+}

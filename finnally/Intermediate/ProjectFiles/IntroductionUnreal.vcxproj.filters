@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\IntroductionUnreal.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{F31BBDD1-B3E8-3BCC-9652-680E16935819}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\IntroductionUnreal.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\IntroductionUnrealEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\.vsconfig" />
+    <Filter Include="Config">
+      <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\IntroductionUnreal">
+      <UniqueIdentifier>{F28CBC4F-22EE-3F7E-825B-5513A65E4DEB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\BezierComponent.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\BezierComponent.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Enemy.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Enemy.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\ExerciceActor.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\ExerciceActor.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Health.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Health.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\IntroductionUnreal\IntroductionUnreal.Build.cs">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\IntroductionUnreal.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\IntroductionUnreal.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\IntroductionUnrealCameraManager.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\IntroductionUnrealCameraManager.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\IntroductionUnrealCharacter.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\IntroductionUnrealCharacter.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\IntroductionUnrealGameMode.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\IntroductionUnrealGameMode.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\IntroductionUnrealPlayerController.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\IntroductionUnrealPlayerController.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\MotionObject.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\MotionObject.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\MyTools.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\MyTools.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\TestComponent.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\TestComponent.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Turret.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Turret.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <Filter Include="Source\IntroductionUnreal\Variant_Horror">
+      <UniqueIdentifier>{646CBB9E-86FA-338F-8B94-5FA900F784D3}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Horror\HorrorCharacter.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Horror\HorrorCharacter.h">
+      <Filter>Source\IntroductionUnreal\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Horror\HorrorGameMode.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Horror\HorrorGameMode.h">
+      <Filter>Source\IntroductionUnreal\Variant_Horror</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Horror\HorrorPlayerController.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Horror</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Horror\HorrorPlayerController.h">
+      <Filter>Source\IntroductionUnreal\Variant_Horror</Filter>
+    </ClInclude>
+    <Filter Include="Source\IntroductionUnreal\Variant_Horror\UI">
+      <UniqueIdentifier>{7E318FC1-38F7-3CF2-B2EA-A68A6FB874DF}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Horror\UI\HorrorUI.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Horror\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Horror\UI\HorrorUI.h">
+      <Filter>Source\IntroductionUnreal\Variant_Horror\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\IntroductionUnreal\Variant_Shooter">
+      <UniqueIdentifier>{7CDEFA1E-847D-3981-ACE1-F015F80D2774}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\ShooterCharacter.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\ShooterCharacter.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\ShooterGameMode.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\ShooterGameMode.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\ShooterPlayerController.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\ShooterPlayerController.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter</Filter>
+    </ClInclude>
+    <Filter Include="Source\IntroductionUnreal\Variant_Shooter\AI">
+      <UniqueIdentifier>{89968F7A-7BAE-3CE8-8444-6613EDCE6BC4}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\EnvQueryContext_Target.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\EnvQueryContext_Target.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\ShooterAIController.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\ShooterAIController.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\ShooterNPC.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\ShooterNPC.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\ShooterStateTreeUtility.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\AI\ShooterStateTreeUtility.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\AI</Filter>
+    </ClInclude>
+    <Filter Include="Source\IntroductionUnreal\Variant_Shooter\UI">
+      <UniqueIdentifier>{BDFEADEC-4A00-38ED-A365-F137BD7CCA98}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\UI\ShooterBulletCounterUI.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\UI\ShooterBulletCounterUI.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\UI</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\UI\ShooterUI.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\UI</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\UI\ShooterUI.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\UI</Filter>
+    </ClInclude>
+    <Filter Include="Source\IntroductionUnreal\Variant_Shooter\Weapons">
+      <UniqueIdentifier>{66242D85-DCB4-3A11-A893-5F19AE4AFF34}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterPickup.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterPickup.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterProjectile.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterProjectile.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterWeapon.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterWeapon.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterWeaponHolder.cpp">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Variant_Shooter\Weapons\ShooterWeaponHolder.h">
+      <Filter>Source\IntroductionUnreal\Variant_Shooter\Weapons</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

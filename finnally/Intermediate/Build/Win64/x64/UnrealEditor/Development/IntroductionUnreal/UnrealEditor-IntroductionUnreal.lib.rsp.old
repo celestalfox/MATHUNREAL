@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UnrealEditor-IntroductionUnreal.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"G:/maths/MATHUNREAL/finnally/Intermediate/Build/Win64/x64/IntroductionUnrealEditor/Development/UnrealEd/SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.h.obj"
+"G:/maths/MATHUNREAL/finnally/Intermediate/Build/Win64/x64/UnrealEditor/Development/IntroductionUnreal/Module.IntroductionUnreal.cpp.obj"
+"G:/maths/MATHUNREAL/finnally/Intermediate/Build/Win64/x64/UnrealEditor/Development/IntroductionUnreal/PerModuleInline.gen.cpp.obj"
+"G:/maths/MATHUNREAL/finnally/Intermediate/Build/Win64/x64/UnrealEditor/Development/IntroductionUnreal/Default.rc2.res"
+/OUT:"G:/maths/MATHUNREAL/finnally/Intermediate/Build/Win64/x64/UnrealEditor/Development/IntroductionUnreal/UnrealEditor-IntroductionUnreal.lib"

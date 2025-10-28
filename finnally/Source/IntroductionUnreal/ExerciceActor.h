@@ -7,19 +7,20 @@
 #include "ExerciceActor.generated.h"
 
 UCLASS()
-class EXERCICEACTOR_API AExerciceActor : public AActor
+class INTRODUCTIONUNREAL_API AExerciceActor : public AActor
 {
 	GENERATED_BODY()
-
-public:
+	
+public:	
+	// Sets default values for this actor's properties
 	AExerciceActor();
 
 protected:
-	UPROPERTY(VisibleAnywhere)
-	UStaticMeshComponent* MeshComponent;
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 
-private:
-	// Meshes internes non exposés à l’éditeur
-	UStaticMesh* CubeMesh;
-	UStaticMesh* SphereMesh;
+public:	
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
+
 };

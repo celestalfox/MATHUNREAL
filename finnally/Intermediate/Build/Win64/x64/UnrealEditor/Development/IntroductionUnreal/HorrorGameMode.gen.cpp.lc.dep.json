@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\unrealeditor\\inc\\introductionunreal\\uht\\horrorgamemode.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\x64\\introductionunrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\introductionunreal\\definitions.introductionunreal.h",
+            "g:\\maths\\mathunreal\\finnally\\source\\introductionunreal\\variant_horror\\horrorgamemode.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "c:\\program files\\epic games\\ue_5.6\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\unrealeditor\\inc\\introductionunreal\\uht\\horrorgamemode.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}
