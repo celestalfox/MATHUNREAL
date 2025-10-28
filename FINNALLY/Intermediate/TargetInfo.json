@@ -1,13 +1,13 @@
 {
 	"Targets": [
 		{
-			"Name": "FINNALLY",
-			"Path": "..\\Source\\FINNALLY.Target.cs",
+			"Name": "IntroductionUnreal",
+			"Path": "..\\Source\\IntroductionUnreal.Target.cs",
 			"Type": "Game"
 		},
 		{
-			"Name": "FINNALLYEditor",
-			"Path": "..\\Source\\FINNALLYEditor.Target.cs",
+			"Name": "IntroductionUnrealEditor",
+			"Path": "..\\Source\\IntroductionUnrealEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]
