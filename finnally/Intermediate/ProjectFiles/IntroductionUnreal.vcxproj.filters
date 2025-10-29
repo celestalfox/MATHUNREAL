@@ -51,6 +51,12 @@
     <ClInclude Include="..\..\Source\IntroductionUnreal\ExerciceActor.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\ExerciceInterface.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\ExerciceInterface.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Health.cpp">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>

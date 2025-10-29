@@ -1,27 +1,55 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "ExerciceActor.h"
+#include "UObject/ConstructorHelpers.h"
+#include "ExerciceInterface.h"
 
-// Sets default values
 AExerciceActor::AExerciceActor()
 {
- 	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	PrimaryActorTick.bCanEverTick = true;
+	PrimaryActorTick.bCanEverTick = false;
 
+	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
+	RootComponent = Root;
+
+	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
+	MeshComponent->SetupAttachment(Root);
+	MeshComponent->SetMobility(EComponentMobility::Movable);
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeAsset(TEXT("/Engine/EditorMeshes/EditorCube.EditorCube"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> SphereAsset(TEXT("/Engine/EditorMeshes/EditorSphere.EditorSphere"));
+
+	if (CubeAsset.Succeeded()) CubeMesh = CubeAsset.Object;
+	if (SphereAsset.Succeeded()) SphereMesh = SphereAsset.Object;
+
+	if (CubeMesh) MeshComponent->SetStaticMesh(CubeMesh);
+
+	bUseSphereMesh = false;
 }
 
-// Called when the game starts or when spawned
+void AExerciceActor::OnConstruction(const FTransform& Transform)
+{
+	Super::OnConstruction(Transform);
+
+	if (bUseSphereMesh && SphereMesh)
+	{
+		MeshComponent->SetStaticMesh(SphereMesh);
+	}
+	else if (CubeMesh)
+	{
+		MeshComponent->SetStaticMesh(CubeMesh);
+	}
+}
+
 void AExerciceActor::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
+	if (TargetActor && TargetActor->GetClass()->ImplementsInterface(UExerciceInterface::StaticClass()))
+	{
+		FVector TargetLocation = IExerciceInterface::Execute_GetLocation(TargetActor);
+		MeshComponent->SetWorldLocation(TargetLocation);
+	}
 }
 
-// Called every frame
-void AExerciceActor::Tick(float DeltaTime)
+FVector AExerciceActor::GetLocation_Implementation() const
 {
-	Super::Tick(DeltaTime);
-
+	return MeshComponent ? MeshComponent->GetComponentLocation() : FVector::ZeroVector;
 }
-

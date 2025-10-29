@@ -1,0 +1,15 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\unrealeditor\\inc\\introductionunreal\\uht\\shooterprojectile.gen.cpp",
+        "ProvidedModule": "",
+        "PCH": "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\x64\\introductionunrealeditor\\development\\unrealed\\sharedpch.unrealed.project.valapi.valexpapi.cpp20.h.pch",
+        "Includes": [
+            "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\introductionunreal\\definitions.introductionunreal.h",
+            "g:\\maths\\mathunreal\\finnally\\source\\introductionunreal\\variant_shooter\\weapons\\shooterprojectile.h",
+            "g:\\maths\\mathunreal\\finnally\\intermediate\\build\\win64\\unrealeditor\\inc\\introductionunreal\\uht\\shooterprojectile.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

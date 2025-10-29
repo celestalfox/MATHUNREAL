@@ -5,12 +5,12 @@
 			"BezierComponent.gen.cpp.obj",
 			"Enemy.gen.cpp.obj",
 			"EnvQueryContext_Target.gen.cpp.obj",
+			"ExerciceActor.gen.cpp.obj",
 			"Health.gen.cpp.obj",
 			"HorrorCharacter.gen.cpp.obj",
 			"HorrorGameMode.gen.cpp.obj",
 			"HorrorPlayerController.gen.cpp.obj",
 			"HorrorUI.gen.cpp.obj",
-			"IntroductionUnreal.init.gen.cpp.obj",
 			"IntroductionUnrealCameraManager.gen.cpp.obj",
 			"IntroductionUnrealCharacter.gen.cpp.obj",
 			"IntroductionUnrealGameMode.gen.cpp.obj",
@@ -31,6 +31,7 @@
 			"ShooterWeaponHolder.gen.cpp.obj",
 			"TestComponent.gen.cpp.obj",
 			"Turret.gen.cpp.obj",
+			"PerModuleInline.gen.cpp.obj",
 			"BezierComponent.cpp.obj",
 			"Enemy.cpp.obj",
 			"Health.cpp.obj",
@@ -60,7 +61,10 @@
 			"ShooterProjectile.cpp.obj",
 			"ShooterWeapon.cpp.obj",
 			"ShooterWeaponHolder.cpp.obj",
-			"PerModuleInline.gen.cpp.obj"
+			"ExerciceInterface.gen.cpp.obj",
+			"IntroductionUnreal.init.gen.cpp.obj",
+			"ExerciceActor.cpp.obj",
+			"ExerciceInterface.cpp.obj"
 		]
 	}
 }

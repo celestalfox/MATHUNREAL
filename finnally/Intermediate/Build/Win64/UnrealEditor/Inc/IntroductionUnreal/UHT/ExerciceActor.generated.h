@@ -19,7 +19,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 // ********** Begin Class AExerciceActor ***********************************************************
 INTRODUCTIONUNREAL_API UClass* Z_Construct_UClass_AExerciceActor_NoRegister();
 
-#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_12_INCLASS_NO_PURE_DECLS \
+#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_11_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAExerciceActor(); \
 	friend struct Z_Construct_UClass_AExerciceActor_Statics; \
@@ -27,10 +27,11 @@ private: \
 	friend INTRODUCTIONUNREAL_API UClass* Z_Construct_UClass_AExerciceActor_NoRegister(); \
 public: \
 	DECLARE_CLASS2(AExerciceActor, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/IntroductionUnreal"), Z_Construct_UClass_AExerciceActor_NoRegister) \
-	DECLARE_SERIALIZER(AExerciceActor)
+	DECLARE_SERIALIZER(AExerciceActor) \
+	virtual UObject* _getUObject() const override { return const_cast<AExerciceActor*>(this); }
 
 
-#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_12_ENHANCED_CONSTRUCTORS \
+#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_11_ENHANCED_CONSTRUCTORS \
 	/** Deleted move- and copy-constructors, should never be used */ \
 	AExerciceActor(AExerciceActor&&) = delete; \
 	AExerciceActor(const AExerciceActor&) = delete; \
@@ -40,12 +41,12 @@ public: \
 	NO_API virtual ~AExerciceActor();
 
 
-#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_9_PROLOG
-#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_12_GENERATED_BODY \
+#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_8_PROLOG
+#define FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_11_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_12_INCLASS_NO_PURE_DECLS \
-	FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_12_ENHANCED_CONSTRUCTORS \
+	FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_11_INCLASS_NO_PURE_DECLS \
+	FID_finnally_Source_IntroductionUnreal_ExerciceActor_h_11_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

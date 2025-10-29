@@ -1,26 +1,41 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "ExerciceInterface.h"
 #include "ExerciceActor.generated.h"
 
 UCLASS()
-class INTRODUCTIONUNREAL_API AExerciceActor : public AActor
+class INTRODUCTIONUNREAL_API AExerciceActor : public AActor, public IExerciceInterface
 {
 	GENERATED_BODY()
-	
-public:	
-	// Sets default values for this actor's properties
+
+public:
 	AExerciceActor();
 
 protected:
-	// Called when the game starts or when spawned
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* Root;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UStaticMeshComponent* MeshComponent;
+
+	UPROPERTY(EditInstanceOnly, Category = "Mesh")
+	bool bUseSphereMesh;
+
+	UPROPERTY(EditAnywhere, Category = "Mesh")
+	AActor* TargetActor;
+
+private:
+	UStaticMesh* CubeMesh;
+	UStaticMesh* SphereMesh;
+
+public:
+	virtual void OnConstruction(const FTransform& Transform) override;
+
+
+	virtual FVector GetLocation_Implementation() const override;
+
+protected:
 	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
-
 };
