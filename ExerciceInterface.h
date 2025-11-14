@@ -18,5 +18,5 @@ class INTRODUCTIONUNREAL_API IExerciceInterface
 
 public:
 
-    virtual FVector GetLocation() const = 0;
+    const FVector GetLocation() const = 0;
 };

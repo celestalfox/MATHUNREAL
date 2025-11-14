@@ -58,13 +58,7 @@ struct Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
 		{ "Category", "Exercise" },
-#if !UE_BUILD_SHIPPING
-		{ "Comment", "// Unreal-style interface declaration\n" },
-#endif
 		{ "ModuleRelativePath", "ExerciceInterface.h" },
-#if !UE_BUILD_SHIPPING
-		{ "ToolTip", "Unreal-style interface declaration" },
-#endif
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
@@ -143,7 +137,7 @@ struct Z_Construct_UClass_UExerciceInterface_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UExerciceInterface_GetLocation, "GetLocation" }, // 70821356
+		{ &Z_Construct_UFunction_UExerciceInterface_GetLocation, "GetLocation" }, // 1117408953
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -187,10 +181,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(UExerciceInterface);
 struct Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UExerciceInterface, UExerciceInterface::StaticClass, TEXT("UExerciceInterface"), &Z_Registration_Info_UClass_UExerciceInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExerciceInterface), 1223303877U) },
+		{ Z_Construct_UClass_UExerciceInterface, UExerciceInterface::StaticClass, TEXT("UExerciceInterface"), &Z_Registration_Info_UClass_UExerciceInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExerciceInterface), 2354301277U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_1905020790(TEXT("/Script/IntroductionUnreal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_3501786835(TEXT("/Script/IntroductionUnreal"),
 	Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

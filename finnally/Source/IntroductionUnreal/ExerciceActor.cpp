@@ -34,7 +34,7 @@ void AExerciceActor::OnConstruction(const FTransform& Transform)
 	}
 	else if (CubeMesh)
 	{
-		MeshComponent->SetStaticMesh(CubeMesh);
+		MeshComponent->SetStaticMesh(CubeMesh);ol w
 	}
 }
 

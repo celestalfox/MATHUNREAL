@@ -67,7 +67,7 @@ public: \
 
 
 #define FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_7_PROLOG
-#define FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_18_GENERATED_BODY \
+#define FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_16_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_10_RPC_WRAPPERS_NO_PURE_DECLS \

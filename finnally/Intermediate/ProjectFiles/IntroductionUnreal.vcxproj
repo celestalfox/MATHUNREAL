@@ -307,6 +307,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\MyTools.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\RetakeComponent.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\RetakeComponent.h"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\TestComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
