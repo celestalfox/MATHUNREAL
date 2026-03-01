@@ -9,6 +9,7 @@ UCLASS()
 class INTRODUCTIONUNREAL_API ATurret : public AActor
 {
 	GENERATED_BODY()
+
 	
 public:	
 	ATurret();
@@ -21,4 +22,11 @@ public:
 
 	UFUNCTION(BlueprintCallable)
 	void ApplyDamage(AActor* Entity, int Amount);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Mesh")
+	UStaticMeshComponent* MeshRenderer;
+
+	UStaticMesh* SphereMesh;
+
+
 };

@@ -30,14 +30,14 @@ struct ExerciceInterface_eventGetLocation_Parms
 	{
 	}
 };
-FVector IExerciceInterface::GetLocation() const
+const FVector IExerciceInterface::GetLocation()
 {
 	check(0 && "Do not directly call Event functions in Interfaces. Call Execute_GetLocation instead.");
 	ExerciceInterface_eventGetLocation_Parms Parms;
 	return Parms.ReturnValue;
 }
 static FName NAME_UExerciceInterface_GetLocation = FName(TEXT("GetLocation"));
-FVector IExerciceInterface::Execute_GetLocation(const UObject* O)
+const FVector IExerciceInterface::Execute_GetLocation(UObject* O)
 {
 	check(O != NULL);
 	check(O->GetClass()->ImplementsInterface(UExerciceInterface::StaticClass()));
@@ -45,9 +45,9 @@ FVector IExerciceInterface::Execute_GetLocation(const UObject* O)
 	UFunction* const Func = O->FindFunction(NAME_UExerciceInterface_GetLocation);
 	if (Func)
 	{
-		const_cast<UObject*>(O)->ProcessEvent(Func, &Parms);
+		O->ProcessEvent(Func, &Parms);
 	}
-	else if (auto I = (const IExerciceInterface*)(O->GetNativeInterfaceAddress(UExerciceInterface::StaticClass())))
+	else if (auto I = (IExerciceInterface*)(O->GetNativeInterfaceAddress(UExerciceInterface::StaticClass())))
 	{
 		Parms.ReturnValue = I->GetLocation_Implementation();
 	}
@@ -57,20 +57,22 @@ struct Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics
 {
 #if WITH_METADATA
 	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
-		{ "Category", "Exercise" },
 		{ "ModuleRelativePath", "ExerciceInterface.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ReturnValue_MetaData[] = {
+		{ "NativeConst", "" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FStructPropertyParams NewProp_ReturnValue;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ExerciceInterface_eventGetLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000582, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ExerciceInterface_eventGetLocation_Parms, ReturnValue), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ReturnValue_MetaData), NewProp_ReturnValue_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::NewProp_ReturnValue,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UExerciceInterface, nullptr, "GetLocation", Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::PropPointers), sizeof(ExerciceInterface_eventGetLocation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x5C820C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::Function_MetaDataParams), Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::Function_MetaDataParams)},  };
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::FuncParams = { { (UObject*(*)())Z_Construct_UClass_UExerciceInterface, nullptr, "GetLocation", Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::PropPointers), sizeof(ExerciceInterface_eventGetLocation_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x0C820C00, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::Function_MetaDataParams), Z_Construct_UFunction_UExerciceInterface_GetLocation_Statics::Function_MetaDataParams)},  };
 static_assert(sizeof(ExerciceInterface_eventGetLocation_Parms) < MAX_uint16);
 UFunction* Z_Construct_UFunction_UExerciceInterface_GetLocation()
 {
@@ -137,7 +139,7 @@ struct Z_Construct_UClass_UExerciceInterface_Statics
 #endif // WITH_METADATA
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
-		{ &Z_Construct_UFunction_UExerciceInterface_GetLocation, "GetLocation" }, // 1117408953
+		{ &Z_Construct_UFunction_UExerciceInterface_GetLocation, "GetLocation" }, // 1712310845
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -181,10 +183,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR(UExerciceInterface);
 struct Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_UExerciceInterface, UExerciceInterface::StaticClass, TEXT("UExerciceInterface"), &Z_Registration_Info_UClass_UExerciceInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExerciceInterface), 2354301277U) },
+		{ Z_Construct_UClass_UExerciceInterface, UExerciceInterface::StaticClass, TEXT("UExerciceInterface"), &Z_Registration_Info_UClass_UExerciceInterface, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(UExerciceInterface), 3435765445U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_3501786835(TEXT("/Script/IntroductionUnreal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_2003460848(TEXT("/Script/IntroductionUnreal"),
 	Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h__Script_IntroductionUnreal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

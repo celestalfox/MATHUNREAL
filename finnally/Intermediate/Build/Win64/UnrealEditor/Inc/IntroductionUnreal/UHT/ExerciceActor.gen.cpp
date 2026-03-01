@@ -14,7 +14,6 @@ void EmptyLinkFunctionForGeneratedCodeExerciceActor() {}
 // ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_USceneComponent_NoRegister();
 ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 INTRODUCTIONUNREAL_API UClass* Z_Construct_UClass_AExerciceActor();
 INTRODUCTIONUNREAL_API UClass* Z_Construct_UClass_AExerciceActor_NoRegister();
@@ -62,30 +61,27 @@ struct Z_Construct_UClass_AExerciceActor_Statics
 		{ "IncludePath", "ExerciceActor.h" },
 		{ "ModuleRelativePath", "ExerciceActor.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_Root_MetaData[] = {
-		{ "Category", "ExerciceActor" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "ExerciceActor.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeshComponent_MetaData[] = {
-		{ "Category", "ExerciceActor" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "ExerciceActor.h" },
-	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_bUseSphereMesh_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_SwitchMesh_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Mesh" },
 		{ "ModuleRelativePath", "ExerciceActor.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_TargetActor_MetaData[] = {
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeshRenderer_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
+		{ "Category", "Mesh" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "ExerciceActor.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_OtherActor_MetaData[] = {
+		{ "AllowPrivateAccess", "true" },
 		{ "Category", "Mesh" },
 		{ "ModuleRelativePath", "ExerciceActor.h" },
 	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_Root;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeshComponent;
-	static void NewProp_bUseSphereMesh_SetBit(void* Obj);
-	static const UECodeGen_Private::FBoolPropertyParams NewProp_bUseSphereMesh;
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_TargetActor;
+	static void NewProp_SwitchMesh_SetBit(void* Obj);
+	static const UECodeGen_Private::FBoolPropertyParams NewProp_SwitchMesh;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeshRenderer;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_OtherActor;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static const UECodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
@@ -94,19 +90,17 @@ struct Z_Construct_UClass_AExerciceActor_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExerciceActor_Statics::NewProp_Root = { "Root", nullptr, (EPropertyFlags)0x00200800000a0009, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AExerciceActor, Root), Z_Construct_UClass_USceneComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_Root_MetaData), NewProp_Root_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExerciceActor_Statics::NewProp_MeshComponent = { "MeshComponent", nullptr, (EPropertyFlags)0x002008000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AExerciceActor, MeshComponent), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeshComponent_MetaData), NewProp_MeshComponent_MetaData) };
-void Z_Construct_UClass_AExerciceActor_Statics::NewProp_bUseSphereMesh_SetBit(void* Obj)
+void Z_Construct_UClass_AExerciceActor_Statics::NewProp_SwitchMesh_SetBit(void* Obj)
 {
-	((AExerciceActor*)Obj)->bUseSphereMesh = 1;
+	((AExerciceActor*)Obj)->SwitchMesh = 1;
 }
-const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AExerciceActor_Statics::NewProp_bUseSphereMesh = { "bUseSphereMesh", nullptr, (EPropertyFlags)0x0020080000000801, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AExerciceActor), &Z_Construct_UClass_AExerciceActor_Statics::NewProp_bUseSphereMesh_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_bUseSphereMesh_MetaData), NewProp_bUseSphereMesh_MetaData) };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExerciceActor_Statics::NewProp_TargetActor = { "TargetActor", nullptr, (EPropertyFlags)0x0020080000000001, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AExerciceActor, TargetActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_TargetActor_MetaData), NewProp_TargetActor_MetaData) };
+const UECodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AExerciceActor_Statics::NewProp_SwitchMesh = { "SwitchMesh", nullptr, (EPropertyFlags)0x0040000000000805, UECodeGen_Private::EPropertyGenFlags::Bool | UECodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, sizeof(bool), sizeof(AExerciceActor), &Z_Construct_UClass_AExerciceActor_Statics::NewProp_SwitchMesh_SetBit, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_SwitchMesh_MetaData), NewProp_SwitchMesh_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExerciceActor_Statics::NewProp_MeshRenderer = { "MeshRenderer", nullptr, (EPropertyFlags)0x004000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AExerciceActor, MeshRenderer), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeshRenderer_MetaData), NewProp_MeshRenderer_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AExerciceActor_Statics::NewProp_OtherActor = { "OtherActor", nullptr, (EPropertyFlags)0x0040000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(AExerciceActor, OtherActor), Z_Construct_UClass_AActor_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_OtherActor_MetaData), NewProp_OtherActor_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AExerciceActor_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExerciceActor_Statics::NewProp_Root,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExerciceActor_Statics::NewProp_MeshComponent,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExerciceActor_Statics::NewProp_bUseSphereMesh,
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExerciceActor_Statics::NewProp_TargetActor,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExerciceActor_Statics::NewProp_SwitchMesh,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExerciceActor_Statics::NewProp_MeshRenderer,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AExerciceActor_Statics::NewProp_OtherActor,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AExerciceActor_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_AExerciceActor_Statics::DependentSingletons[])() = {
@@ -115,7 +109,7 @@ UObject* (*const Z_Construct_UClass_AExerciceActor_Statics::DependentSingletons[
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_AExerciceActor_Statics::DependentSingletons) < 16);
 const UECodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_AExerciceActor_Statics::InterfaceParams[] = {
-	{ Z_Construct_UClass_UExerciceInterface_NoRegister, (int32)VTABLE_OFFSET(AExerciceActor, IExerciceInterface), false },  // 2354301277
+	{ Z_Construct_UClass_UExerciceInterface_NoRegister, (int32)VTABLE_OFFSET(AExerciceActor, IExerciceInterface), false },  // 3435765445
 };
 const UECodeGen_Private::FClassParams Z_Construct_UClass_AExerciceActor_Statics::ClassParams = {
 	&AExerciceActor::StaticClass,
@@ -148,10 +142,10 @@ AExerciceActor::~AExerciceActor() {}
 struct Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceActor_h__Script_IntroductionUnreal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_AExerciceActor, AExerciceActor::StaticClass, TEXT("AExerciceActor"), &Z_Registration_Info_UClass_AExerciceActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AExerciceActor), 2082524247U) },
+		{ Z_Construct_UClass_AExerciceActor, AExerciceActor::StaticClass, TEXT("AExerciceActor"), &Z_Registration_Info_UClass_AExerciceActor, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(AExerciceActor), 1132878081U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceActor_h__Script_IntroductionUnreal_1859929369(TEXT("/Script/IntroductionUnreal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceActor_h__Script_IntroductionUnreal_3352945886(TEXT("/Script/IntroductionUnreal"),
 	Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceActor_h__Script_IntroductionUnreal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_ExerciceActor_h__Script_IntroductionUnreal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

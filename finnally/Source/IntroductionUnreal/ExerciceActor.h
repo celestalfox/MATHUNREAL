@@ -9,33 +9,30 @@ UCLASS()
 class INTRODUCTIONUNREAL_API AExerciceActor : public AActor, public IExerciceInterface
 {
 	GENERATED_BODY()
-
-public:
+	
+public:	
 	AExerciceActor();
 
 protected:
-	UPROPERTY(VisibleAnywhere)
-	USceneComponent* Root;
+	virtual void BeginPlay() override;
+	virtual void OnConstruction(const FTransform& Transform) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	UStaticMeshComponent* MeshComponent;
-
-	UPROPERTY(EditInstanceOnly, Category = "Mesh")
-	bool bUseSphereMesh;
-
-	UPROPERTY(EditAnywhere, Category = "Mesh")
-	AActor* TargetActor;
+public:	
+	virtual void Tick(float DeltaTime) override;
+	const FVector GetLocation_Implementation() override;
 
 private:
+	UPROPERTY(EditInstanceOnly, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Mesh")
+	bool SwitchMesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Mesh")
+	UStaticMeshComponent* MeshRenderer;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"), Category = "Mesh")
+	AActor* OtherActor;
+
 	UStaticMesh* CubeMesh;
 	UStaticMesh* SphereMesh;
 
-public:
-	virtual void OnConstruction(const FTransform& Transform) override;
-
-
-	virtual FVector GetLocation_Implementation() const override;
-
-protected:
-	virtual void BeginPlay() override;
+	USceneComponent* Root;
 };

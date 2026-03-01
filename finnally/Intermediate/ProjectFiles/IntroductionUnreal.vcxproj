@@ -252,16 +252,22 @@
     <None Include="..\..\IntroductionUnreal.uproject"/>
     <None Include="..\..\Source\IntroductionUnreal.Target.cs"/>
     <None Include="..\..\Source\IntroductionUnrealEditor.Target.cs"/>
+    <None Include="..\..\.gitignore"/>
     <None Include="..\..\.vsconfig"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>
     <None Include="..\..\Config\DefaultGame.ini"/>
+    <None Include="..\..\Config\DefaultGameplayTags.ini"/>
     <None Include="..\..\Config\DefaultInput.ini"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\BezierComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\BezierComponent.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Door.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Door.h"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Enemy.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -274,10 +280,38 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\ExerciceInterface.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Flag.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Flag.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\FlagManager.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\FlagManager.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\FlagTrigger.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\FlagTrigger.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\GameHUD.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\GameHUD.h"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Health.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\Health.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Inspectable.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Inspectable.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\Interactable.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\Interactable.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\InteractionWidget.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\InteractionWidget.h"/>
     <None Include="..\..\Source\IntroductionUnreal\IntroductionUnreal.Build.cs"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\IntroductionUnreal.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -299,6 +333,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\IntroductionUnrealPlayerController.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\math_example.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\math_example.h"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\MotionObject.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
@@ -307,14 +345,22 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\MyTools.h"/>
-    <ClCompile Include="..\..\Source\IntroductionUnreal\RetakeComponent.cpp">
+    <ClCompile Include="..\..\Source\IntroductionUnreal\PickupKey.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClInclude Include="..\..\Source\IntroductionUnreal\RetakeComponent.h"/>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\PickupKey.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\PlayerInteraction.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\PlayerInteraction.h"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\TestComponent.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\TestComponent.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\TestInteraction.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\TestInteraction.h"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Turret.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>

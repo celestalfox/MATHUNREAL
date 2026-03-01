@@ -1,55 +1,59 @@
 #include "ExerciceActor.h"
-#include "UObject/ConstructorHelpers.h"
-#include "ExerciceInterface.h"
 
 AExerciceActor::AExerciceActor()
 {
-	PrimaryActorTick.bCanEverTick = false;
+	PrimaryActorTick.bCanEverTick = true;
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeMeshFinder(TEXT("/Engine/EditorMeshes/EditorCube.EditorCube"));
+	if (CubeMeshFinder.Succeeded())
+		CubeMesh = CubeMeshFinder.Object;
+	else
+		CubeMesh = nullptr;
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> SphereMeshFinder(TEXT("/Engine/EditorMeshes/EditorSphere.EditorSphere"));
+	if (SphereMeshFinder.Succeeded())
+		SphereMesh = SphereMeshFinder.Object;
+	else
+		SphereMesh = nullptr;
 
 	Root = CreateDefaultSubobject<USceneComponent>(TEXT("Root"));
-	RootComponent = Root;
+	SetRootComponent(Root);
 
-	MeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("MeshComponent"));
-	MeshComponent->SetupAttachment(Root);
-	MeshComponent->SetMobility(EComponentMobility::Movable);
+	MeshRenderer = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh Renderer"));
+	MeshRenderer->SetStaticMesh(CubeMesh);
+	MeshRenderer->SetupAttachment(Root);
 
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> CubeAsset(TEXT("/Engine/EditorMeshes/EditorCube.EditorCube"));
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> SphereAsset(TEXT("/Engine/EditorMeshes/EditorSphere.EditorSphere"));
-
-	if (CubeAsset.Succeeded()) CubeMesh = CubeAsset.Object;
-	if (SphereAsset.Succeeded()) SphereMesh = SphereAsset.Object;
-
-	if (CubeMesh) MeshComponent->SetStaticMesh(CubeMesh);
-
-	bUseSphereMesh = false;
-}
-
-void AExerciceActor::OnConstruction(const FTransform& Transform)
-{
-	Super::OnConstruction(Transform);
-
-	if (bUseSphereMesh && SphereMesh)
-	{
-		MeshComponent->SetStaticMesh(SphereMesh);
-	}
-	else if (CubeMesh)
-	{
-		MeshComponent->SetStaticMesh(CubeMesh);ol w
-	}
+	OtherActor = nullptr;
 }
 
 void AExerciceActor::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (TargetActor && TargetActor->GetClass()->ImplementsInterface(UExerciceInterface::StaticClass()))
+	if (OtherActor != nullptr && OtherActor->GetClass()->ImplementsInterface(UExerciceInterface::StaticClass()))
 	{
-		FVector TargetLocation = IExerciceInterface::Execute_GetLocation(TargetActor);
-		MeshComponent->SetWorldLocation(TargetLocation);
+		FVector Location = IExerciceInterface::Execute_GetLocation(OtherActor);
+		MeshRenderer->SetWorldLocation(Location);
 	}
 }
 
-FVector AExerciceActor::GetLocation_Implementation() const
+void AExerciceActor::OnConstruction(const FTransform& Transform)
 {
-	return MeshComponent ? MeshComponent->GetComponentLocation() : FVector::ZeroVector;
+	Super::OnConstruction(Transform);
+
+	if (SwitchMesh)
+		MeshRenderer->SetStaticMesh(SphereMesh);
+	else
+		MeshRenderer->SetStaticMesh(CubeMesh);
 }
+
+void AExerciceActor::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+}
+
+const FVector AExerciceActor::GetLocation_Implementation()
+{
+	return MeshRenderer->GetComponentLocation();
+}
+

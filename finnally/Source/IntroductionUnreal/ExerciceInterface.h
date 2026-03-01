@@ -10,13 +10,11 @@ class UExerciceInterface : public UInterface
 	GENERATED_BODY()
 };
 
-
 class INTRODUCTIONUNREAL_API IExerciceInterface
 {
 	GENERATED_BODY()
 
 public:
-
-	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Exercise")
-	FVector GetLocation() const;
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
+	const FVector GetLocation();
 };

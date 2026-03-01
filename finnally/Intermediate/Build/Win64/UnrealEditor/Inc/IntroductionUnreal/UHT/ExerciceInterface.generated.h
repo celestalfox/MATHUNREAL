@@ -18,7 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 
 // ********** Begin Interface UExerciceInterface ***************************************************
 #define FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
-	virtual FVector GetLocation_Implementation() const { return FVector(ForceInit); }; \
+	virtual const FVector GetLocation_Implementation() { return FVector(ForceInit); }; \
 	DECLARE_FUNCTION(execGetLocation);
 
 
@@ -62,12 +62,12 @@ protected: \
 public: \
 	typedef UExerciceInterface UClassType; \
 	typedef IExerciceInterface ThisClass; \
-	static FVector Execute_GetLocation(const UObject* O); \
+	static const FVector Execute_GetLocation(UObject* O); \
 	virtual UObject* _getUObject() const { return nullptr; }
 
 
 #define FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_7_PROLOG
-#define FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_16_GENERATED_BODY \
+#define FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_15_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
 	FID_finnally_Source_IntroductionUnreal_ExerciceInterface_h_10_RPC_WRAPPERS_NO_PURE_DECLS \

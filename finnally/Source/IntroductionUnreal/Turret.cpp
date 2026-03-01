@@ -3,6 +3,16 @@
 ATurret::ATurret()
 {
 	PrimaryActorTick.bCanEverTick = true;
+
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> SphereMeshFinder(TEXT("/Engine/EditorMeshes/EditorSphere.EditorSphere"));
+	if (SphereMeshFinder.Succeeded())
+		SphereMesh = SphereMeshFinder.Object;
+	else
+		SphereMesh = nullptr;
+
+
+	MeshRenderer = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh Renderer"));
+	MeshRenderer->SetStaticMesh(SphereMesh);
 }
 
 void ATurret::BeginPlay()
