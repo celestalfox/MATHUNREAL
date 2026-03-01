@@ -16,19 +16,7 @@
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
-    <None Include="..\..\Config\DefaultEditor.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
-      <Filter>Config</Filter>
-    </None>
     <None Include="..\..\Config\DefaultEngine.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGame.ini">
-      <Filter>Config</Filter>
-    </None>
-    <None Include="..\..\Config\DefaultGameplayTags.ini">
       <Filter>Config</Filter>
     </None>
     <None Include="..\..\Config\DefaultInput.ini">
@@ -65,6 +53,12 @@
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\ExerciceInterface.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\fightingWidget.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\fightingWidget.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Flag.cpp">
@@ -146,6 +140,18 @@
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\IntroductionUnrealPlayerController.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\LevelFlagsSave.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\LevelFlagsSave.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\MathsExamples.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\MathsExamples.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\math_example.cpp">
