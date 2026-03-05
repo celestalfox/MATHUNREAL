@@ -61,12 +61,6 @@
     <ClInclude Include="..\..\Source\IntroductionUnreal\fightingWidget.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\IntroductionUnreal\fightingwidgetsep.cpp">
-      <Filter>Source\IntroductionUnreal</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\IntroductionUnreal\fightingwidgetsep.h">
-      <Filter>Source\IntroductionUnreal</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Flag.cpp">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
