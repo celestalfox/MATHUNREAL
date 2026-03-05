@@ -280,6 +280,10 @@
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\fightingWidget.h"/>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\fightingwidgetsep.cpp">
+      <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\fightingwidgetsep.h"/>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Flag.cpp">
       <AdditionalIncludeDirectories>$(ClCompile_AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
