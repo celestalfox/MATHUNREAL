@@ -14,7 +14,6 @@ void EmptyLinkFunctionForGeneratedCodeTurret() {}
 // ********** Begin Cross Module References ********************************************************
 ENGINE_API UClass* Z_Construct_UClass_AActor();
 ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
-ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
 INTRODUCTIONUNREAL_API UClass* Z_Construct_UClass_ATurret();
 INTRODUCTIONUNREAL_API UClass* Z_Construct_UClass_ATurret_NoRegister();
 UPackage* Z_Construct_UPackage__Script_IntroductionUnreal();
@@ -112,15 +111,7 @@ struct Z_Construct_UClass_ATurret_Statics
 		{ "IncludePath", "Turret.h" },
 		{ "ModuleRelativePath", "Turret.h" },
 	};
-	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MeshRenderer_MetaData[] = {
-		{ "AllowPrivateAccess", "true" },
-		{ "Category", "Mesh" },
-		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "Turret.h" },
-	};
 #endif // WITH_METADATA
-	static const UECodeGen_Private::FObjectPropertyParams NewProp_MeshRenderer;
-	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ATurret_ApplyDamage, "ApplyDamage" }, // 3217073008
@@ -131,11 +122,6 @@ struct Z_Construct_UClass_ATurret_Statics
 	};
 	static const UECodeGen_Private::FClassParams ClassParams;
 };
-const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ATurret_Statics::NewProp_MeshRenderer = { "MeshRenderer", nullptr, (EPropertyFlags)0x001000000008000d, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ATurret, MeshRenderer), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MeshRenderer_MetaData), NewProp_MeshRenderer_MetaData) };
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ATurret_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ATurret_Statics::NewProp_MeshRenderer,
-};
-static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ATurret_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ATurret_Statics::DependentSingletons[])() = {
 	(UObject* (*)())Z_Construct_UClass_AActor,
 	(UObject* (*)())Z_Construct_UPackage__Script_IntroductionUnreal,
@@ -147,11 +133,11 @@ const UECodeGen_Private::FClassParams Z_Construct_UClass_ATurret_Statics::ClassP
 	&StaticCppClassTypeInfo,
 	DependentSingletons,
 	FuncInfo,
-	Z_Construct_UClass_ATurret_Statics::PropPointers,
+	nullptr,
 	nullptr,
 	UE_ARRAY_COUNT(DependentSingletons),
 	UE_ARRAY_COUNT(FuncInfo),
-	UE_ARRAY_COUNT(Z_Construct_UClass_ATurret_Statics::PropPointers),
+	0,
 	0,
 	0x009001A4u,
 	METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UClass_ATurret_Statics::Class_MetaDataParams), Z_Construct_UClass_ATurret_Statics::Class_MetaDataParams)
@@ -172,10 +158,10 @@ ATurret::~ATurret() {}
 struct Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_Turret_h__Script_IntroductionUnreal_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ATurret, ATurret::StaticClass, TEXT("ATurret"), &Z_Registration_Info_UClass_ATurret, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATurret), 1535781729U) },
+		{ Z_Construct_UClass_ATurret, ATurret::StaticClass, TEXT("ATurret"), &Z_Registration_Info_UClass_ATurret, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ATurret), 2677934463U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_Turret_h__Script_IntroductionUnreal_452882848(TEXT("/Script/IntroductionUnreal"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_Turret_h__Script_IntroductionUnreal_1049174333(TEXT("/Script/IntroductionUnreal"),
 	Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_Turret_h__Script_IntroductionUnreal_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_finnally_Source_IntroductionUnreal_Turret_h__Script_IntroductionUnreal_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
