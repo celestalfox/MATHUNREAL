@@ -16,7 +16,19 @@
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGameplayTags.ini">
       <Filter>Config</Filter>
     </None>
     <None Include="..\..\Config\DefaultInput.ini">
@@ -29,6 +41,24 @@
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\BezierComponent.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\CameraTrigger.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\CameraTrigger.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\ChildMotion.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\ChildMotion.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\CustomMotion.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\CustomMotion.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Door.cpp">
@@ -55,10 +85,10 @@
     <ClInclude Include="..\..\Source\IntroductionUnreal\ExerciceInterface.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\IntroductionUnreal\fightingWidget.cpp">
+    <ClCompile Include="..\..\Source\IntroductionUnreal\FightWidget.cpp">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\IntroductionUnreal\fightingWidget.h">
+    <ClInclude Include="..\..\Source\IntroductionUnreal\FightWidget.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Flag.cpp">
@@ -154,22 +184,40 @@
     <ClInclude Include="..\..\Source\IntroductionUnreal\MathsExamples.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\IntroductionUnreal\math_example.cpp">
-      <Filter>Source\IntroductionUnreal</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\IntroductionUnreal\math_example.h">
-      <Filter>Source\IntroductionUnreal</Filter>
-    </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\MotionObject.cpp">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\MotionObject.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\MouseInteraction.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\MouseInteraction.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\MyHealth.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\MyHealth.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\MyTools.cpp">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\MyTools.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\MyTurret.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\MyTurret.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\ParentMotion.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\ParentMotion.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\PickupKey.cpp">
@@ -184,6 +232,12 @@
     <ClInclude Include="..\..\Source\IntroductionUnreal\PlayerInteraction.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\PlayerValuesSave.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\PlayerValuesSave.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\TestComponent.cpp">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
@@ -194,6 +248,12 @@
       <Filter>Source\IntroductionUnreal</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\IntroductionUnreal\TestInteraction.h">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\IntroductionUnreal\TopViewCharacter.cpp">
+      <Filter>Source\IntroductionUnreal</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\IntroductionUnreal\TopViewCharacter.h">
       <Filter>Source\IntroductionUnreal</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\IntroductionUnreal\Turret.cpp">

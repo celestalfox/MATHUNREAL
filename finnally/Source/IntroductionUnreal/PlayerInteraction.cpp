@@ -5,7 +5,7 @@ UPlayerInteraction::UPlayerInteraction()
 	PrimaryComponentTick.bCanEverTick = true;
 
 	DetectionRange = 0.0f;
-	Camera = nullptr;
+	//Camera = nullptr;
 	InteractableActor = nullptr;
 	Hud = nullptr;
 }
@@ -14,7 +14,7 @@ void UPlayerInteraction::BeginPlay()
 {
 	Super::BeginPlay();
 
-	Camera = GetOwner()->GetComponentByClass<UCameraComponent>();
+	//Camera = GetOwner()->GetComponentByClass<UCameraComponent>();
 	Hud = Cast<AGameHUD>(UGameplayStatics::GetPlayerController(GetWorld(), 0)->GetHUD());
 }
 
@@ -23,6 +23,9 @@ void UPlayerInteraction::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	GetInteractableObject();
+
+	if (InteractableActor != nullptr)
+		FaceWidgetToCamera();
 }
 
 void UPlayerInteraction::UseInteractableActor()
@@ -33,8 +36,8 @@ void UPlayerInteraction::UseInteractableActor()
 
 void UPlayerInteraction::GetInteractableObject()
 {
-	if (Camera == nullptr)
-		return;
+	//if (Camera == nullptr)
+	//	return;
 
 	UWorld* World = GetWorld();
 	if (World == nullptr)
@@ -43,8 +46,12 @@ void UPlayerInteraction::GetInteractableObject()
 	//Resultat
 	FHitResult Hit;
 	//Points de départ et d'arrivée du line trace
-	FVector Start = Camera->GetComponentLocation();
-	FVector End = Start + Camera->GetForwardVector() * DetectionRange;
+	//FVector Start = Camera->GetComponentLocation();
+	//FVector End = Start + Camera->GetForwardVector() * DetectionRange;
+	
+	FVector Start = GetOwner()->GetActorLocation();
+	FVector End = Start + GetOwner()->GetActorForwardVector() * DetectionRange;
+
 	//Channel sur lequel on effectue le line trace
 	ECollisionChannel Channel(ECC_GameTraceChannel1);
 	//Paramètres supplémentaires, le dernier permet d'ignorer un acteur dans le calcul
@@ -72,10 +79,34 @@ void UPlayerInteraction::GetInteractableObject()
 
 void UPlayerInteraction::SetInteractableObject(AActor* Interactable)
 {
+	if (Interactable != nullptr && InteractableActor == nullptr)
+	{
+		IInteractable::Execute_ShowDescription(Interactable, true);
+	}
+	else if (Interactable == nullptr && InteractableActor != nullptr)
+	{
+		IInteractable::Execute_ShowDescription(InteractableActor, false);
+	}
+
 	InteractableActor = Interactable;
 
-	if (InteractableActor == nullptr)
-		Hud->SetInteractionDescription("");
-	else
-		Hud->SetInteractionDescription(IInteractable::Execute_GetDescription(InteractableActor));
+	//if (InteractableActor == nullptr)
+	//	Hud->SetInteractionDescription("");
+	//else
+	//	Hud->SetInteractionDescription(IInteractable::Execute_GetDescription(InteractableActor));
+}
+
+void UPlayerInteraction::FaceWidgetToCamera()
+{
+	APlayerController* Controller = GetWorld()->GetFirstPlayerController();
+	if (Controller == nullptr)
+		return;
+
+	TObjectPtr<APlayerCameraManager> CameraManager = Controller->PlayerCameraManager;
+	if (CameraManager == nullptr)
+		return;
+
+	FRotator CameraRotation = CameraManager->GetCameraRotation();
+	FRotator WidgetRotation = CameraRotation.GetInverse();
+	IInteractable::Execute_SetWidgetRotation(InteractableActor, CameraRotation);
 }

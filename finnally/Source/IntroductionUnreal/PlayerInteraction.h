@@ -29,12 +29,13 @@ public:
 private:
 	void GetInteractableObject();
 	void SetInteractableObject(AActor* Interactable);
+	void FaceWidgetToCamera();
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (AllowPrivateAccess = "true"))
 	float DetectionRange;
 
-	UCameraComponent* Camera;
+	//UCameraComponent* Camera;
 
 	AActor* InteractableActor;
 
